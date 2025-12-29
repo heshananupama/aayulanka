@@ -1,0 +1,4 @@
+/* optional: keep minimal; Tailwind does most */
+input, textarea { outline: none; }
+input:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.15); }
+

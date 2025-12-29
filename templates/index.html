@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO -->
+<section class="relative">
+  <div class="absolute inset-0">
+    <!-- Replace with your own image in /static/images/hero.jpg -->
+    <img src="/static/images/hero3.png"
+     class="h-[520px] w-full object-cover"
+     style="object-position: 50% 35%;"
+     alt="Sri Lanka landscape">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 pt-20 pb-16">
+    <div class="max-w-xl text-white">
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+        Budget, Adventure & Family Tours in Sri Lanka — Private & Custom
+      </h1>
+      <p class="mt-4 text-lg text-white/90">
+        Private driver, airport pickup, hotel booking, and a friendly local guide. Tell us your dates and budget — we’ll build the best itinerary.. Tell us your dates — we’ll plan the rest.
+      </p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="/tours" class="rounded-xl bg-white text-slate-900 px-5 py-3 font-medium hover:bg-slate-100">
+          Explore Tours
+        </a>
+        <!-- WhatsApp link: replace phone number -->
+        <a href="https://wa.me/94769775395?text=Hi%20I%20want%20to%20plan%20a%20Sri%20Lanka%20trip"
+           class="rounded-xl bg-emerald-500 px-5 py-3 font-medium hover:bg-emerald-600">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <div class="mt-8 flex gap-6 text-sm text-white/85">
+        <div>⭐ Local expertise</div>
+        <div>🚗 Private transport</div>
+        <div>🕒 Flexible plans</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="mx-auto max-w-6xl px-4 py-14">
+  <div class="flex items-end justify-between gap-4">
+    <div>
+      <h2 class="text-2xl font-semibold">Popular tour packages</h2>
+      <p class="mt-1 text-slate-600">Choose a starting point — we can customize everything.</p>
+    </div>
+    <a href="/tours" class="text-sm font-medium text-slate-800 hover:text-slate-600">View all →</a>
+  </div>
+
+  <div class="mt-8 grid gap-5 md:grid-cols-3">
+    {% for t in tours %}
+    <div class="rounded-2xl border p-5 shadow-sm hover:shadow-md transition">
+      <div class="text-xs inline-flex rounded-full bg-slate-100 px-3 py-1 text-slate-700">{{ t.duration }}</div>
+      <h3 class="mt-3 text-lg font-semibold">{{ t.title }}</h3>
+      <p class="mt-2 text-slate-600">{{ t.desc }}</p>
+      <div class="mt-4 text-sm text-slate-700">{{ t.price_note }}</div>
+      <a href="/contact" class="mt-5 inline-block rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-medium hover:bg-slate-800">
+        Request itinerary
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="bg-slate-50">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+    <h2 class="text-2xl font-semibold">Why travelers choose us</h2>
+    <div class="mt-8 grid gap-5 md:grid-cols-3">
+      <div class="rounded-2xl bg-white border p-6">
+        <h3 class="font-semibold">Reliable & safe</h3>
+        <p class="mt-2 text-slate-600">Experienced local guidance, clean vehicles, and clear communication.</p>
+      </div>
+      <div class="rounded-2xl bg-white border p-6">
+        <h3 class="font-semibold">Tailored experiences</h3>
+        <p class="mt-2 text-slate-600">Culture, nature, beaches, food — we plan around what you love.</p>
+      </div>
+      <div class="rounded-2xl bg-white border p-6">
+        <h3 class="font-semibold">Fast planning</h3>
+        <p class="mt-2 text-slate-600">Message us your dates + budget and get an itinerary quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="mx-auto max-w-6xl px-4 py-14">
+  <div class="rounded-3xl bg-slate-900 text-white p-10 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div>
+      <h2 class="text-2xl font-semibold">Ready to plan your Sri Lanka trip?</h2>
+      <p class="mt-2 text-white/80">Tell us dates, number of people, and places you like — we’ll send options.</p>
+    </div>
+    <a href="/contact" class="rounded-xl bg-white text-slate-900 px-6 py-3 font-medium hover:bg-slate-100">
+      Contact us
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+

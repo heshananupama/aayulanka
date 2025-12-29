@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title if title else "Aayu Lanka Journeys | Private Driver & Custom Sri Lanka Tours" }}</title>
+  <meta name="description" content="Budget, adventure & family tours in Sri Lanka. Private driver, airport pickup, hotel booking, and local guide. Message us on WhatsApp to plan your trip." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body class="bg-white text-slate-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+
+      <!-- Brand -->
+      <a href="/" class="flex items-center gap-3">
+        <!-- keep your logo.png -->
+        <img src="/static/images/logo.png" alt="Aayu Lanka Journeys" class="h-9 w-9 rounded-lg object-contain" />
+        <div class="leading-tight hidden sm:block">
+          <div class="font-semibold tracking-tight text-base md:text-lg">Aayu Lanka Journeys</div>
+          <div class="text-xs text-slate-500">Private • Custom • Budget-Friendly</div>
+        </div>
+      </a>
+
+      <!-- Nav + CTA -->
+      <div class="flex items-center gap-3">
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+          <a class="hover:text-slate-900" href="/tours">Tours</a>
+          <a class="hover:text-slate-900" href="/gallery">Gallery</a>
+          <a class="hover:text-slate-900" href="/contact">Contact</a>
+        </nav>
+
+        <a href="tel:+94769775395"
+           class="hidden sm:inline-flex rounded-xl border px-4 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50">
+          Call
+        </a>
+
+        <a class="inline-flex rounded-xl bg-emerald-500 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-600"
+           href="https://wa.me/94769775395?text=Hi%20Aayu%20Lanka%20Journeys%20—%20I%20want%20to%20plan%20a%20trip!">
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="mt-16 border-t">
+    <div class="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-600">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>© {{ 2025 }} Aayu Lanka Journeys — Sri Lanka Tourism</div>
+        <div class="flex gap-4">
+          <a clas
