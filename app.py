@@ -17,12 +17,12 @@ TOURS = [
 ]
 
 GALLERY = [
-    {"src": "/static/images/gallery/01.jpg", "alt": "Sigiriya sunrise"},
+    {"src": "/static/images/gallery/01.png", "alt": "Pinnawala elephant orphanage"},
     {"src": "/static/images/gallery/02.png", "alt": "Hill country views"},
-    {"src": "/static/images/gallery/03.png", "alt": "Beach & sunset"},
-    {"src": "/static/images/gallery/04.jpg", "alt": "Galle fort coast"},
+    {"src": "/static/images/gallery/03.png", "alt": "Beach and sunset"},
+    {"src": "/static/images/gallery/05.png", "alt": "Galle fort coast"},
     {"src": "/static/images/gallery/04.png", "alt": "Tea plantation walk"},
-    {"src": "/static/images/gallery/06.jpg", "alt": "Train ride experience"},
+    {"src": "/static/images/gallery/06.png", "alt": "Train ride experience"},
 ]
 
 @app.get("/gallery", response_class=HTMLResponse)
